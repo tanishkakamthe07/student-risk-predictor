@@ -49,47 +49,11 @@ models, metrics, synthetic_data = train_models()
 if 'students' not in st.session_state:
     st.session_state.students = []
 
-st.markdown("""
-<style>
-.block-container {
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
-}
-
-.hero {
-    padding: 1.2rem 1.4rem;
-    border-radius: 16px;
-    background: linear-gradient(120deg, #10294b, #1768d5);
-    color: #ffffff;
-    margin-bottom: 1rem;
-}
-
-.hero h1 {
-    color: #ffffff !important;
-    margin: 0;
-}
-
-.hero p {
-    color: #f0f5ff !important;
-    margin: 0.35rem 0 0;
-}
-
-div[data-testid="stMetric"] {
-    background: var(--secondary-background-color);
-    color: var(--text-color);
-    padding: 14px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-}
-
-div[data-testid="stMetric"] label,
-div[data-testid="stMetric"] [data-testid="stMetricLabel"],
-div[data-testid="stMetric"] [data-testid="stMetricValue"],
-div[data-testid="stMetric"] [data-testid="stMetricDelta"] {
-    color: var(--text-color) !important;
-}
-</style>
-""", unsafe_allow_html=True)
+st.markdown('''<style>
+.block-container{padding-top:1.5rem;padding-bottom:2rem} .hero{padding:1.2rem 1.4rem;border-radius:16px;background:linear-gradient(120deg,#10294b,#1768d5);color:white;margin-bottom:1rem} .hero h1{color:white;margin:0} .hero p{opacity:.9;margin:.35rem 0 0} div[data-testid="stMetric"]{background:#f6f9ff;padding:14px;border-radius:12px;border:1px solid #000000}
+</style>''', unsafe_allow_html=True)
+st.markdown('<div class="hero"><h1>🎓 Student Academic Performance & Dropout Risk Predictor</h1><p>Early support through academic indicators · Presentation demo</p></div>', unsafe_allow_html=True)
+st.warning('Demo limitation: the model is trained on synthetic sample data generated for this presentation, not on real student records. Predictions and metrics are illustrative and must not be used for actual student decisions.')
 
 with st.sidebar:
     st.title('🎓 StudentRiskPredictor')
